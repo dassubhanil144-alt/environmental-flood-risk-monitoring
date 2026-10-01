@@ -2,6 +2,9 @@
 # AI-Powered Environmental Flood Risk Monitoring & Early Warning Dashboard
 
 A machine-learning based environmental monitoring and flood-risk assessment system built using Python, Random Forest, and Flask.
+## 🚀 Live Demo
+
+👉 [Open the Live Environmental Flood Risk Dashboard](https://environmental-flood-risk-monitoring.onrender.com)
 
 ## Overview
 
