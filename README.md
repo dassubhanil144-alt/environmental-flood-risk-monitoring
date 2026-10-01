@@ -272,7 +272,7 @@ environmental-flood-risk-monitoring/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone https://github.com/dassubhanil144-alt/environmental-flood-risk-monitoring.git
 ```
 
 ### 2. Open the project directory
