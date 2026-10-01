@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Environmental Intelligence Network</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🌍 Environmental Intelligence Network</h1>
+
+        <p>AI-Powered Environmental Early Warning System</p>
+
+    </div>
+
+
+    <div class="container">
+
+        <h2 class="section-title">📡 Live Environmental Data</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌧️ Rainfall</h3>
+                <div class="value" id="rainfall">
+                    {{ rainfall|round(2) }} mm
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🌊 Water Level</h3>
+                <div class="value" id="water_level">
+                    {{ water_level|round(2) }} m
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>💧 River Discharge</h3>
+                <div class="value" id="discharge">
+                    {{ discharge|round(2) }} m³/s
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Soil Moisture</h3>
+                <div class="value" id="soil_moisture">
+                    {{ soil_moisture|round(2) }} %
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>👥 Population Density</h3>
+                <div class="value" id="population_density">
+                    {{ population_density|round(0) }}
+                </div>
+            </div>
+
+        </div>
+
+
+        <h2 class="section-title">🤖 AI Flood Risk Analysis</h2>
+
+        <div class="analysis">
+
+            <div class="analysis-row">
+                <span>Hazard — <span id="hazard">{{ hazard|round(3) }}</span></span>
+            </div>
+
+            <div class="analysis-row">
+                <span>Exposure — <span id="exposure">{{ exposure|round(3) }}</span></span>
+            </div>
+
+            <div class="analysis-row">
+                <span>Vulnerability — <span id="vulnerability">{{ vulnerability|round(3) }}</span></span>
+            </div>
+
+        </div>
+
+
+        <div class="risk-box">
+
+            <h2>🚨 AI Flood Risk Prediction</h2>
+
+            <div class="risk-score" id="predicted_risk">
+                {{ (predicted_risk * 100)|round(1) }}%
+            </div>
+
+            <div class="risk-level" id="risk_level">
+                Risk Level: {{ risk_level }}
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+
+        Environmental Intelligence Network | SIH Prototype
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
